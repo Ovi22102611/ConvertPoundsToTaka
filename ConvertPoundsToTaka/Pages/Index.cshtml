@@ -1,0 +1,16 @@
+﻿@page
+@model IndexModel
+<h2>Pound to Taka Converter</h2>
+
+<form method="post">
+    <label for="pounds">Amount in Pounds (£):</label>
+    <input type="number" asp-for="AmountInPounds" />
+
+    <button type="submit">Convert</button>
+</form>
+
+@if (Model.ConvertedAmount.HasValue)
+{
+    <p>Amount in Taka: @Model.ConvertedAmount</p>
+}
+CurrencyConverter.cshtml.cs:
